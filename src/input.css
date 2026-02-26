@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.line{
+    @apply absolute w-7 h-[2px] bg-indigo-950
+    transition-all duration-500;
+}
+/* absolute - to position each block below one another.
+*/
+
+.top { top: 10px; }
+.mid { top: 18px; }
+.bot { top: 26px; }
+
+.group:hover .top {
+  transform: rotate(45deg);
+  top: 18px;
+}
+
+.group:hover .mid {
+  opacity: 0;
+}
+
+.group:hover .bot {
+  transform: rotate(-45deg);
+  top: 18px;
+}
